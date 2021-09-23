@@ -1,0 +1,29 @@
+.list-item {
+   margin-bottom: 15px;
+   opacity: 0.8;
+   font-size: 18px;
+   transition: .3s ease-in-out;
+   cursor: pointer;
+   &:last-child {
+      margin-bottom: 0;
+   }
+   a {
+      transition: .3s ease-in-out;
+   }
+   &:hover {
+      color: #5B78D4;
+      opacity: 1;
+      a {
+         color: #5B78D4;
+         opacity: 1;
+      }
+   }
+   &.active {
+      color: #5B78D4;
+      opacity: 1;
+      a {
+         color: #5B78D4;
+         opacity: 1;
+      }
+   }
+}

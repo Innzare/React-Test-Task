@@ -1,0 +1,106 @@
+@import './../../styles/template.scss';
+
+.empty-content {
+   display: flex;
+   p {
+      margin: auto;
+      font-size: 32px;
+      font-weight: bold;
+      opacity: 0.3;
+   }
+}
+.content {
+   width: 100%;
+   padding: 15px 25px;
+   @include tablets {
+      padding-top: 80px;
+   }
+   .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 22px;
+      color: #5B78D4;
+      @include phones {
+         font-size: 18px;
+      }
+      button {
+         background: #D6E9F3;
+         padding: 10px 30px;
+         border-radius: 10px;
+         border: 0;
+         color: #717374;
+         cursor: pointer;
+         transition: background .3s ease-in-out;
+         @include phones {
+            padding: 10px 15px;
+         }
+         &:hover {
+            background: #b9d8e9;
+         }
+      }
+   }
+   .filters {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+      .side {
+         &.left {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            @include phones {
+               justify-content: space-between;
+               margin-bottom: 20px;
+            }
+         }
+         &.right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            &:hover {
+               opacity: 0.6;
+            }
+            img {
+               width: 15px;
+               transition: .3s ease-in-out;
+               &.default {
+                  transform: rotate(-90deg);
+               }
+               &.to-min {
+                  transform: rotate(0deg);
+               }
+               &.to-min {
+                  transform: rotate(180deg);
+               }
+            }
+         }
+      }
+      button {
+         padding: 10px 20px;
+         border: 1px solid #b9d8e9;
+         border-radius: 7px;
+         background: #fff;
+         color: #717374;
+         cursor: pointer;
+         transition: background .3s ease-in-out;
+         @include phones {
+            padding: 10px;
+            flex: 0 1 45%;
+         }
+         &:hover {
+            background: #D6E9F3;
+         }
+         &.active {
+            background: #D6E9F3;
+         }
+      }
+   }
+   .events {
+      margin-top: 40px;
+   }
+}

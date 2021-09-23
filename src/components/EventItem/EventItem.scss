@@ -1,0 +1,104 @@
+@import './../../styles/template.scss';
+
+.event-item {
+   @include phones {
+      margin-bottom: 30px;
+   }
+   .date {
+      padding: 10px;
+      background: #D6E9F3;
+      color: #717374;
+      @include phones {
+         font-size: 14px;
+      }
+   }
+   .body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      .left {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         flex: 0 1 70%;
+         transition: .3s ease-in-out;
+         @include tablets {
+            flex: 0 1 100%;
+         }
+         @include phones {
+            flex-direction: column;
+            gap: 15px;
+         }
+         .avatar {
+            width: 60px;
+            height: 60px;
+            max-width: 60px;
+            max-height: 60px;
+            // background-color: rgba(128, 128, 128, 0.473);
+            border-radius: 100%;
+            overflow: hidden;
+            img {
+               width: 100%;
+               height: 100%;
+            }
+         }
+         .event-text {
+            @include phones {
+               text-align: center;
+            }
+         }
+         .side-block {
+            flex: 0 1 40%;
+            @include tablets {
+               flex: 0 1 33%;
+            }
+            @include phones {}
+         }
+      }
+      &:hover {
+         .right {
+            visibility: visible;
+            opacity: 1;
+         }
+         .left {
+            color: #5977D4;
+         }
+      }
+   }
+   .right {
+      justify-content: start;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s ease-in-out;
+      @include phones {
+         visibility: visible;
+         opacity: 1;
+         margin: 0 auto;
+      }
+      button {
+         padding: 7px 20px;
+         color: #fff;
+         background: #5C6EBD;
+         border-radius: 10px;
+         margin-right: 10px;
+         border: 0;
+         cursor: pointer;
+         font-size: 16px;
+         transition: .3s ease-in-out;
+         &:hover {
+            background: #7a89ca;
+         }
+         &.outline {
+            background: #fff;
+            color: #717374;
+            border: 1px solid #5C6EBD;
+            &:hover {
+               background: #dbe0f3;
+            }
+         }
+      }
+   }
+}

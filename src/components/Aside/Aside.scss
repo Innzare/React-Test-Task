@@ -1,0 +1,50 @@
+@import './../../styles/template.scss';
+
+.aside {
+   display: flex;
+   flex-direction: column;
+   width: 320px;
+   height: calc(100vh - 50px);
+   border-right: 1px solid #F1F5EC;
+   @include tablets {
+      position: fixed;
+      margin-top: 50px;
+      left: 0;
+      width: 202px;
+      background-color: #fff;
+      z-index: 10;
+      transform: translateX(-205px);
+      transition: .3s ease-in-out;
+      &.active {
+         transform: translateX(0px);
+      }
+   }
+   @include phones {
+   }
+   .new-event {
+      display: flex;
+      justify-content: flex-end;
+      button {
+         display: flex;
+         opacity: 0.5;
+         font-size: 22px;
+         text-transform: uppercase;
+         border: 0;
+         background-color: transparent;
+         cursor: pointer;
+         transition: opacity .3s ease-in-out;
+         &:hover {
+            opacity: 1;
+         }
+      }
+   }
+   &__block {
+      padding: 15px 25px;
+      border-bottom: 1px solid #F1F5EC;
+   }
+   ul {
+      li {
+         margin-bottom: 20px;
+      }
+   }
+}
